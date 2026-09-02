@@ -28,13 +28,13 @@ a { color: var(--accent); }
 }
 
 .topbar-inner {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 18px 24px;
+  width: 100%;
+  padding: 18px clamp(24px, 4vw, 56px);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 24px;
+  box-sizing: border-box;
 }
 
 .topbar-name {
@@ -69,17 +69,18 @@ a { color: var(--accent); }
 /* Layout */
 .layout {
   display: flex;
-  max-width: 980px;
-  margin: 0 auto;
+  width: 100%;
   align-items: flex-start;
-  gap: 40px;
+  gap: clamp(24px, 4vw, 64px);
+  padding: 0 clamp(24px, 4vw, 56px);
+  box-sizing: border-box;
 }
 
 /* Sidebar */
 .sidebar {
-  width: 250px;
+  width: 260px;
   flex-shrink: 0;
-  padding: 40px 0 40px 24px;
+  padding: 40px 0;
 }
 
 .avatar {
@@ -149,8 +150,13 @@ a { color: var(--accent); }
 /* Main content */
 main {
   flex: 1;
-  padding: 40px 24px 64px 0;
-  max-width: 620px;
+  min-width: 0;
+  padding: 40px 0 64px;
+}
+
+main .lede,
+main .paper p {
+  max-width: 900px;
 }
 
 main h2.page-title {
@@ -258,13 +264,13 @@ main h2.page-title {
   }
   .layout {
     flex-direction: column;
+    padding: 0 20px;
   }
   .sidebar {
     width: 100%;
-    padding: 32px 24px 24px;
+    padding: 32px 0 24px;
   }
   main {
-    padding: 32px 24px 56px;
-    max-width: 100%;
+    padding: 32px 0 56px;
   }
 }
