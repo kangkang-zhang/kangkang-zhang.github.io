@@ -28,7 +28,8 @@ a { color: var(--accent); }
 }
 
 .topbar-inner {
-  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 18px clamp(24px, 4vw, 56px);
   display: flex;
   align-items: center;
@@ -69,7 +70,8 @@ a { color: var(--accent); }
 /* Layout */
 .layout {
   display: flex;
-  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   align-items: flex-start;
   gap: clamp(24px, 4vw, 64px);
   padding: 0 clamp(24px, 4vw, 56px);
@@ -159,7 +161,7 @@ main .paper p {
   max-width: 900px;
 }
 
-main h2.page-title {
+main .page-title {
   font-family: var(--sans);
   font-weight: 700;
   font-size: 1.5rem;
